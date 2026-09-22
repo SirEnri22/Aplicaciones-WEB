@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+header{
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.container{
+    width: 80%;
+    margin: 20px auto;
+    background: rgba(133, 128, 136, 0.848);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.615);
+}
+
+.habilidades { 
+    width: 80%;
+    margin: 20px auto;
+    background: rgb(223, 232, 226);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.615);
+}
+
+.habilidades-li{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0%;
+}
+
+.container-boton {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
