@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Clientes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./validaciones.js" defer></script>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <header class="header-section">
+            <h1>Registro de Clientes</h1>
+            <p>Formulario de ingreso de datos de clientes</p>
+        </header>
+
+        <main class="main-content">
+            <form id="formularioCliente" class="formulario" novalidate>
+
+                <fieldset class="grupo-campos">
+                    <legend>Datos del Cliente</legend>
+
+                    <div class="campo">
+                        <label for="cedula">Cédula</label>
+                        <input type="text" id="cedula" name="cedula" maxlength="10" placeholder="Ingrese 10 dígitos">
+                        <span class="mensaje-error" id="errorCedula"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre completo">
+                        <span class="mensaje-error" id="errorNombre"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Ingrese la dirección">
+                        <span class="mensaje-error" id="errorDireccion"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="celular">Celular</label>
+                        <input type="tel" id="celular" name="celular" maxlength="10" placeholder="09XXXXXXXX">
+                        <span class="mensaje-error" id="errorCelular"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="correo">Correo</label>
+                        <input type="email" id="correo" name="correo" placeholder="cliente@correo.com">
+                        <span class="mensaje-error" id="errorCorreo"></span>
+                    </div>
+                </fieldset>
+
+                <div class="contenedor-botones">
+                    <button type="submit" class="boton boton-registrar">REGISTRAR</button>
+                    <button type="reset" class="boton boton-limpiar">LIMPIAR</button>
+                </div>
+
+                <p class="alerta" id="alerta"></p>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Ruber Naranjo - Estudiante ULEAM - Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
