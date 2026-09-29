@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="sytles.css">
+    <script src="calculadora.js" defer></script>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="cabecera">
+            <h1>Calculadora en HTML</h1>
+            <p>Ingrese dos numeros y el bucle ejecutar; las 5 operaciones basicas</p>
+        </header>
+
+        <main class="contenido">
+            <form id="formulario" class="formulario" novalidate>
+
+                <div class="campo">
+                    <label for="num1">num1</label>
+                    <input type="number" id="num1" name="num1" step="any" placeholder="Ej: 12">
+                    <span class="mensaje-error" id="errorNumeroA"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="num2">num2</label>
+                    <input type="number" id="num2" name="num2" step="any" placeholder="Ej: 4">
+                    <span class="mensaje-error" id="errorNumeroB"></span>
+                </div>
+
+                <div class="contenedor-botones">
+                    <button type="submit" class="boton boton-calcular">CALCULAR LAS OPERACIONES </button>
+                </div>
+
+                <p class="alerta" id="alerta"></p>
+            </form>
+
+            <section class="resultados">
+                <h2>Resultados</h2>
+                <ul class="lista-resultados" id="listaResultados"></ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Ruber Naranjo - Estudiante ULEAM - Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
