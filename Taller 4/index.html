@@ -1,0 +1,30 @@
+<HTML>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Taller: Gestor de Tareas Semiestructurado</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="contenedor">
+            <h1>Gestor de Tareas</h1>
+            <form id="formulario-tareas">
+                <input type="text" id="titulo-tarea" placeholder="TItulo de la Tarea" required>
+                <textarea id="descripcion-tarea" placeholder="Descripcion de la Tarea" required></textarea>
+                <button type="submit">Agregar Tarea</button>
+            </form>
+        </div>
+        <div class="acciones-datos">
+            <button id="btn-exportar-json" class="btn-secundario">Exportar a JSON</button>
+            <button id="btn-exportar-xml" class="btn-secundario">Exportar a XML</button>
+        </div>
+        <div>
+            <h2>Mis Tareas Activas</h2>
+            <ul id="lista-tareas"></ul>
+        </div>
+        <script src="aplicacion.js"></script>
+    </body>
+    </html>
+</HTML>
