@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulario sencillo para registrar estudiantes y guardar sus datos en este navegador.">
+  <title>Registro de estudiantes</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="validaciones.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark" aria-hidden="true">RE</div>
+    <div>
+      <h1>Registro de estudiantes</h1>
+    </div>
+  </header>
+
+  <main class="page-layout">
+    <section class="intro" aria-labelledby="intro-title">
+      <p class="eyebrow">Formulario académico</p>
+      <h2 id="intro-title">Un espacio para organizar los datos de cada estudiante.</h2>
+      <p>Completa los campos y guarda el registro. Los datos se quedan en este navegador usando almacenamiento local.</p>
+      <div class="note"><span aria-hidden="true">✳</span> Los campos marcados con <strong>*</strong> son obligatorios.</div>
+    </section>
+
+    <section class="card form-card" aria-labelledby="form-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Datos personales y académicos</p>
+          <h2 id="form-title">Nuevo estudiante</h2>
+        </div>
+        <span class="step-badge">01</span>
+      </div>
+
+      <form id="student-form" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="cedula">Cédula <span>*</span></label>
+            <input id="cedula" name="cedula" type="text" inputmode="numeric" maxlength="10" placeholder="Ej. 0102030405" autocomplete="off" required aria-describedby="cedula-error">
+            <small class="field-hint">Escribe los 10 dígitos, sin guiones.</small>
+            <small class="error-message" id="cedula-error"></small>
+          </div>
+          <div class="field">
+            <label for="apellidos">Apellidos <span>*</span></label>
+            <input id="apellidos" name="apellidos" type="text" maxlength="60" placeholder="Ej. Pérez Gómez" autocomplete="family-name" required aria-describedby="apellidos-error">
+            <small class="error-message" id="apellidos-error"></small>
+          </div>
+          <div class="field">
+            <label for="nombres">Nombres <span>*</span></label>
+            <input id="nombres" name="nombres" type="text" maxlength="60" placeholder="Ej. Ana María" autocomplete="given-name" required aria-describedby="nombres-error">
+            <small class="error-message" id="nombres-error"></small>
+          </div>
+          <div class="field">
+            <label for="telefono">Teléfono <span>*</span></label>
+            <input id="telefono" name="telefono" type="tel" maxlength="15" placeholder="Ej. 0991234567" autocomplete="tel" required aria-describedby="telefono-error">
+            <small class="error-message" id="telefono-error"></small>
+          </div>
+          <div class="field field-wide">
+            <label for="direccion">Dirección <span>*</span></label>
+            <input id="direccion" name="direccion" type="text" maxlength="120" placeholder="Calle principal, número y sector" autocomplete="street-address" required aria-describedby="direccion-error">
+            <small class="error-message" id="direccion-error"></small>
+          </div>
+          <div class="field field-wide">
+            <label for="correo">Correo electrónico <span>*</span></label>
+            <input id="correo" name="correo" type="email" maxlength="100" placeholder="nombre@correo.com" autocomplete="email" required aria-describedby="correo-error">
+            <small class="error-message" id="correo-error"></small>
+          </div>
+          <div class="field">
+            <label for="facultad">Facultad <span>*</span></label>
+            <select id="facultad" name="facultad" required aria-describedby="facultad-error">
+              <option value="">Selecciona una facultad</option>
+              <option>Ciencias de la Vida y Tecnología</option>
+              <option>Ciencias de la Salud</option>
+              <option>Ingeniería, Industria y Arquitectura</option>
+              <option>Ciencias Administrativas, Contables y Comercio</option>
+              <option>Ciencias Sociales, Derecho y Bienestar</option>
+              <option>Educación y Turismo</option>
+              <option>Artes Humanidades y Patrimonio</option>
+              <option>Otra</option>
+            </select>
+            <small class="error-message" id="facultad-error"></small>
+          </div>
+          <div class="field">
+            <label for="nivel">Nivel <span>*</span></label>
+            <select id="nivel" name="nivel" required aria-describedby="nivel-error">
+              <option value="">Selecciona el nivel</option>
+              <option value="1">1.er nivel</option><option value="2">2.º nivel</option>
+              <option value="3">3.er nivel</option><option value="4">4.º nivel</option>
+              <option value="5">5.º nivel</option><option value="6">6.º nivel</option>
+              <option value="7">7.º nivel</option><option value="8">8.º nivel</option>
+              <option value="9">9.º nivel</option><option value="10">10.º nivel</option>
+            </select>
+            <small class="error-message" id="nivel-error"></small>
+          </div>
+          <div class="field">
+            <label for="paralelo">Paralelo <span>*</span></label>
+            <select id="paralelo" name="paralelo" required aria-describedby="paralelo-error">
+              <option value="">Selecciona el paralelo</option>
+              <option>A</option><option>B</option><option>C</option><option>D</option><option>E</option>
+            </select>
+            <small class="error-message" id="paralelo-error"></small>
+          </div>
+        </div>
+        <div id="form-message" class="form-message" role="status" aria-live="polite"></div>
+        <div class="form-actions">
+          <button class="button button-primary" type="submit"><span aria-hidden="true">＋</span> Guardar estudiante</button>
+          <button class="button button-quiet" type="reset">Limpiar formulario</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card records-card" aria-labelledby="records-title">
+      <div class="records-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Lista guardada</p>
+            <h2 id="records-title">Estudiantes registrados <span id="student-count" class="count-badge">0</span></h2>
+          </div>
+        </div>
+        <label class="search-box" for="search-input">
+          <span aria-hidden="true">⌕</span>
+          <input id="search-input" type="search" placeholder="Buscar por nombre o cédula" aria-label="Buscar por nombre o cédula">
+        </label>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Estudiante</th><th>Cédula</th><th>Facultad</th><th>Nivel</th><th>Contacto</th><th><span class="sr-only">Acciones</span></th></tr>
+          </thead>
+          <tbody id="student-list"></tbody>
+        </table>
+        <div id="empty-state" class="empty-state">
+          <span class="empty-icon" aria-hidden="true">✎</span>
+          <h3>Aún no hay registros</h3>
+          <p>Cuando guardes un estudiante, aparecerá en esta lista.</p>
+        </div>
+      </div>
+      <p class="storage-note"><span aria-hidden="true">◉</span> Los registros se guardan en este navegador. Si borras sus datos, se eliminarán.</p>
+    </section>
+  </main>
+  <footer>Hecho para practicar HTML, CSS y JavaScript <span aria-hidden="true">·</span> <span id="current-year"></span></footer>
+</body>
+</html>
+
